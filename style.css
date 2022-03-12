@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Teko:wght@700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+
+.grid-container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgba(17, 17, 17, 0.788);
+    color: #eee;
+}
+
+.grid-container > .operator{
+    background: rgba(255, 155, 238, 0.473)
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.grid-container > .output {
+    grid-column: 1 / -1;
+    background-color: rgba(17, 17, 17, 0.788);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .previous-operand {
+    color: rgb(190, 190, 190);
+    font-size: 1.5rem;
+}
+
+.grid-container > .output > .current-operand {
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}

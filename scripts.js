@@ -1,0 +1,1 @@
+const numberBt = document.querySelectorAll()
